@@ -1,0 +1,26 @@
+{
+    "name": "Magic Sniper",
+    "description": "Indicators for Magic Eden NFTs",
+    "version": "0.6",
+    "manifest_version": 3,
+    "homepage_url": "https://magicsniper.org/",
+    "icons": {
+        "24": "icons/24.png",
+        "32": "icons/32.png",
+        "48": "icons/48.png",
+        "64": "icons/64.png",
+        "128": "icons/128.png",
+        "256": "icons/256.png"
+    },
+    "action": {
+        "default_popup": "popup.html"
+    },
+    "content_scripts": [
+        {
+            "matches": ["https://magiceden.io/*"],
+            "js": ["js/content.js"],
+            "run_at": "document_start"
+        }
+    ],
+    "permissions": ["storage", "activeTab"]
+}
